@@ -6,7 +6,7 @@ on:
 
 jobs:
   test:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Setup Python 3.11
@@ -18,10 +18,7 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f setup/requirements-dev.txt ]; then pip install -r setup/requirements-dev.txt; fi
       - name: Install 1Password CLI
-        uses: simonbs/install-op-cli@2.23.0
-        with:
-          version-number: 2.13.1
-          skip-if-installed: true
+        uses: 1password/install-cli-action@v1
       - name: Verify 1Password was Installed
         run: op --version
       - name: Run pytest
