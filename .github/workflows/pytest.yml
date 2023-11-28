@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setup Python 3.11
-      - uses: actions/setup-python@v2
+        uses: actions/setup-python@v2
         with:
           python-version: 3.11
       - name: Install dependencies
@@ -19,4 +19,4 @@ jobs:
           if [ -f setup/requirements-dev.txt ]; then pip install -r setup/requirements-dev.txt; fi
       - name: Run pytest
         run: |
-          python3 -m pytest tests/unit
+          python -m pytest tests/unit
