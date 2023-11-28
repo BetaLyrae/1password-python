@@ -1,0 +1,19 @@
+[project]
+version = "0.1.0"
+dependencies = ["packaging>23.2"]
+requires-python = ">= 3.11"
+authors = [
+    {name = "Rich Karus", email = "rich@karus.dev"}
+]
+maintainers = [
+    {name = "Rich Karus", email = "rich@karus.dev"}
+]
+description = "A 1Password Python Client"
+readme = {file = "README.md", content-type = "text/markdown"}
+license = {file = "LICENSE"}
+keywords = ["1Password", "1Password Vault Integration", "Security"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python"
+]
+
