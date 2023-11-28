@@ -1,0 +1,22 @@
+name: Unit Tests
+
+on: 
+  pull_request:
+  workflow_dispatch:
+
+  jobs:
+    test:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - name: Setup Python 3.11
+        - uses: actions/setup-python@v2
+          with:
+            python-version: 3.11
+        - name: Install dependencies
+          run: |
+            python -m pip install --upgrade pip
+            if [ -f setup/requirements-dev.txt ]; then pip install -r setup/requirements-dev.txt; fi
+        - name: Run pytest
+          run: |
+            python3 -m pytest tests/unit
