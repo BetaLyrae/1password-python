@@ -14,7 +14,7 @@ class TestGetOpCliVersion(unittest.TestCase):
             stdout="2.23.0\n", stderr="", returncode=0
         )
 
-        result = onepassword._get_op_cli_version()
+        result = onepassword.get_op_cli_version()
 
         mock_subprocess_run.assert_called_once_with(
             ["op", "--version"], capture_output=True, text=True
@@ -31,7 +31,7 @@ class TestGetOpCliVersion(unittest.TestCase):
 
         # Call the function to test and expect an opex.OnepasswordCLINotFound exception
         with self.assertRaises(onepassword.opex.OnePasswordCLINotFound):
-            onepassword._get_op_cli_version()
+            onepassword.get_op_cli_version()
 
         # Assert that the subprocess.run was called with the correct arguments
         mock_subprocess_run.assert_called_once_with(
