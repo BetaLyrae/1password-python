@@ -1,5 +1,5 @@
-![MIT License](https://github.com/BetaLyrae/1password-python/actions/workflows/pytest.yml/badge.svg)
-![Formatter](https://github.com/BetaLyrae/1password-python/actions/workflows/black.yml/badge.svg)
+![Pytest](https://github.com/BetaLyrae/1password-python/actions/workflows/pytest.yml/badge.svg)
+![Black](https://github.com/BetaLyrae/1password-python/actions/workflows/black.yml/badge.svg)
 
 # 1Password Python Client
 
