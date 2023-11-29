@@ -22,7 +22,7 @@ jobs:
         run: |
           python -m pdoc --html -o docs onepassword -f
           mv docs/onepassword/* docs/
-          rm -f docs/onepassword
+          rm -rf docs/onepassword
 
           if [ -f onepassword.html ]; then
             exit 0
